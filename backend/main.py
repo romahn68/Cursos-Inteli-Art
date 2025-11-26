@@ -10,11 +10,7 @@ app = FastAPI(title="Cursos de IA API", version="1.0.0")
 # Configuración CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # React development server
-        "http://127.0.0.1:3000",
-        "http://localhost:5173",  # Vite alternative port
-    ],
+    allow_origins=["*"],  # Permitir todos los orígenes para producción
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
